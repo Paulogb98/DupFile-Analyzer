@@ -42,7 +42,7 @@ DupFile-Analyzer é uma ferramenta de linha de comando escrita em Rust, projetad
 ## REQUISITOS ⚙️
 
 **Rust:** versão 1.70 ou superior (recomendado)  
-**Cargo:** gerenciador de pacotes do Rust (instalado junto com o Rut)
+**Cargo:** gerenciador de pacotes do Rust (instalado junto com o Rust)
 
 <br>
 
