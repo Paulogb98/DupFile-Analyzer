@@ -1,0 +1,25 @@
+[package]
+name = "dupfile-analyzer"
+version = "1.0.0"
+edition = "2021"
+authors = ["Paulo G."]
+description = "SHA-256-based duplicate file scanner."
+homepage = "https://www.linkedin.com/in/paulo-goiss/"
+repository = "https://github.com/Paulogb98/DupFile-Analyzer"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+walkdir = "2.4"
+rayon = "1.8"
+sha2 = "0.10"
+thiserror = "1.0"
+console = "0.15"
+indicatif = "0.17"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+incremental = false
