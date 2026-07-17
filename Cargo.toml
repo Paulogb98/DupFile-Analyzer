@@ -1,0 +1,28 @@
+[package]
+name = "dupfile-analyzer"
+version = "1.0.0"
+edition = "2021"
+authors = ["Paulo G."]
+description = "Interactive duplicate file & image finder (SHA-256 + perceptual hashing)."
+repository = "https://github.com/Paulogb98/DupFile-Analyzer"
+license = "MIT"
+
+[dependencies]
+walkdir = "2.5"
+rayon = "1.10"
+sha2 = "0.10"
+thiserror = "1.0"
+console = "0.15"
+indicatif = "0.17"
+dialoguer = "0.11"
+image = "0.25"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+globset = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+incremental = false
